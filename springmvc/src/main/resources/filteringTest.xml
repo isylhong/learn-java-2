@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tag>
+  project.build.directory: ${project.build.directory}
+  project.basedir: ${project.basedir}
+  project.build.finalName: ${project.build.finalName}
+</tag>

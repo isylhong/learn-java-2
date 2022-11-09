@@ -1,0 +1,29 @@
+可以直接使用的日志jar包：
+jul                 jdk自带
+log4j               log4j
+log4j2              log4j-api、log4j-core
+
+日志门面：
+jul     commons-logging
+slf4j   slf4j-api
+
+日志门面之间的桥接
+slf4j -> jcl        slf4j-jcl
+jcl -> slf4j        jcl-over-slf4j
+
+
+日志门面 + 日志实现：
+日志门面     日志实现               所需相关jar包                       适配包           桥接包(重写日志门面接口实现)
+jul         log4j           commons-logging、log4j                   /                   /
+slf4j       logback         logback-core、logback-classic            /                   /
+slf4j       log4j           slf4j-api、log4j                         slf4j-log4j12       /
+slf4j       log4j2          slf4j-api、log4j-api、log4j-core          log4j-slf4j-impl    /
+
+
+可直接使用的log框架桥接到日志门面(通过重写日志框架jar实现)
+log4j       slf4j       log4j-over-slf4j    存疑
+log4j2      slf4j       log4j-to-slf4j  存疑
+
+
+
+
